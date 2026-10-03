@@ -117,7 +117,7 @@ if user_input:
         add_message("user", "text", text)
         parts.append(text)
     elif photo is not None:
-        parts.append("Please analyze the photo and provide an estimate of calories and macros.")
+        parts.append("Please analyze the photo and explain the content in simple terms for study purposes.")
     with st.spinner("Analyzing..."):
         answer=ask_gemini(parts)
     add_message("assistant", "text", answer)
